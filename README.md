@@ -51,7 +51,7 @@ tableConfigure.findColumn(12).setCellFactory(e -> new BookingActionCell());
 tableViewBooking.setEditable(true);
 ```
 Data model for the TableView
-```
+```java
 public class Booking extends BaseIdEntity {
 
 	private BookingProcess process;
