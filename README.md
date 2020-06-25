@@ -16,21 +16,26 @@ tableConfigure.setSelectionMode(SelectionMode.MULTIPLE)
 .enableFilter("FormatBookingType", true, false)
 .enableFilter("FormatAccount", true, false)
 .enableFilter("FormatStatus", true, false)
+
 // Initialize Column alignment by column id name
 .setAlignment("FormatAmount", "center-right")
 .setAlignment("Id", "center")
 .setAlignment("FormatBookingType", "center")
 .setAlignment("FormatTaxRate", "center")
 .setAlignment("FormatTaxValue", "center")
+
 // Enable the table view context menu, otherwise popup is hidden
 .enableContextMenu(true)
+
 // Handle on selection change
 .addSelectionChanged(this::onTableViewBookingSelection)
+
 // Add action to copy, paste, duplicate and delete menu item
 .addMenuCopyListener(items -> tableConfigure.getMasterData().addAll(items))
 .addMenuDeleteListener(this::onMenuItemDeleteBookingAction)
 .addMenuDuplicateListener(this::onMenuItemDuplicateBookingAction)
 .addMenuPasteListener(items -> tableConfigure.getMasterData().addAll(items))
+
 // Enable column editing with preferred dataype, here it is String, by column index
 .enableStringColumnEdit(4, e->{ 
 	e.getDataClass().setAmount(Double.parseDouble(e.getValue()));
@@ -44,6 +49,7 @@ tableConfigure.setSelectionMode(SelectionMode.MULTIPLE)
 	e.getDataClass().setDescription(e.getValue());
 	restService.save(e.getDataClass());
 });
+
 // Set CellFactory by column index
 tableConfigure.findColumn(0).setCellFactory(e -> new BookingItemTableCell());
 tableConfigure.findColumn(12).setCellFactory(e -> new BookingActionCell());
