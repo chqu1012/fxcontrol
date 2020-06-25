@@ -2,6 +2,8 @@
 My custom controls for javafx
 
 ## FXTableViewSupport Example
+Requirements: Each TableColumns should be defined by id with the attribute field, e.g. "FormatBookDate"
+
 ```
 FXTableViewSupport<Booking> tableConfigure = FXTableViewSupport.forTableView(tableViewBooking).apply();
 tableConfigure.setSelectionMode(SelectionMode.MULTIPLE)
