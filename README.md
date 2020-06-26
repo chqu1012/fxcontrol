@@ -2,7 +2,7 @@
 My custom controls for javafx
 
 <details>
-  <summary># FXTableViewSupport</summary>
+  <summary>FXTableViewSupport</summary>
 Requirements: Each TableColumns should be defined by id with the attribute field, e.g. "FormatBookDate"
 
 ```java
@@ -213,8 +213,8 @@ public class Booking extends BaseIdEntity {
 </details>
 </details>
 
-## FXH2Console Example
-
+<details>
+  <summary>FXH2Console</summary>
 This pane opens the h2 admin console in a pane. The user can queries the result in this console.
 
 * requires h2 lib: http://www.h2database.com/html/download.html
@@ -228,3 +228,4 @@ FXH2Console console = FXH2Console.create().apply()
 	.setPort("8889")
 	.setPath("h2-console");
 ```
+</details>
