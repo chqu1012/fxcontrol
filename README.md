@@ -2,7 +2,7 @@
 My custom controls for javafx
 
 <details>
-  <summary>FXTableViewSupport</summary>
+  <summary># FXTableViewSupport</summary>
 Requirements: Each TableColumns should be defined by id with the attribute field, e.g. "FormatBookDate"
 
 ```java
