@@ -232,6 +232,7 @@ FXH2Console console = FXH2Console.create().apply()
 
 <details>
   <summary>FXProposals for TextFields using custom objects</summary>
+	
 ```java
 public class FXProposalApplication extends FXApplication{
 
