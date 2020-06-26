@@ -229,3 +229,45 @@ FXH2Console console = FXH2Console.create().apply()
 	.setPath("h2-console");
 ```
 </details>
+
+<details>
+  <summary>FXProposals for TextFields using custom objects</summary>
+```java
+public class FXProposalApplication extends FXApplication{
+
+	public class Person implements IFXProposal<Person>{
+		String name;
+
+		public Person(String name) {
+			this.name = name;
+		}
+		
+		@Override
+		public String getValue() {
+			return name;
+		}
+
+		@Override
+		public String getDescription() {
+			return "Small Proposal";
+		}
+
+		@Override
+		public int compareTo(Person o) {
+			return 0;
+		}
+	}
+	
+	@Override
+	protected Parent getRoot() {
+		TextField textField = new TextField();
+		ObservableList<Person> listPerson = FXCollections.observableArrayList();
+		listPerson.add(new Person("Peter Jackson"));
+		listPerson.add(new Person("Christopher Nolan"));
+		listPerson.add(new Person("Lee Yun Yee"));
+		FXProposalSupport.forTextField(textField).apply().setPropoals(listPerson);
+		return textField;
+	}
+}
+```
+</details>
