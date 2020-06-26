@@ -2,6 +2,8 @@
 My custom controls for javafx
 
 ## FXTableViewSupport Example
+<details>
+  <summary>Click to expand!</summary>
 Requirements: Each TableColumns should be defined by id with the attribute field, e.g. "FormatBookDate"
 
 ```java
@@ -209,6 +211,7 @@ public class Booking extends BaseIdEntity {
 	}
 }
 ```
+</details>
 </details>
 
 ## FXH2Console Example
