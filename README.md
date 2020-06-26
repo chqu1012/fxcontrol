@@ -231,7 +231,8 @@ FXH2Console console = FXH2Console.create().apply()
 </details>
 
 <details>
-  <summary>FXProposals for TextFields using custom objects</summary>
+  <summary>FXProposals for TextFields</summary>
+To use own objects, they must extends from IFXProposal. The value will be the value of the text and the description will shown the hint for the proposal in the user interface.
 	
 ```java
 public class FXProposalApplication extends FXApplication{
