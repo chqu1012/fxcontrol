@@ -1,9 +1,8 @@
 # fxcontrol
 My custom controls for javafx
 
-## FXTableViewSupport Example
 <details>
-  <summary>Click to expand!</summary>
+  <summaryFXTableViewSupport</summary>
 Requirements: Each TableColumns should be defined by id with the attribute field, e.g. "FormatBookDate"
 
 ```java
