@@ -206,3 +206,19 @@ public class Booking extends BaseIdEntity {
 	}
 }
 ```
+
+## FXH2Console Example
+
+This pane opens the h2 admin console in a pane. The user can queries the result in this console.
+
+* requires h2 lib: http://www.h2database.com/html/download.html
+* Start the h2 server
+
+How to create a H2 console
+
+```java
+FXH2Console console = FXH2Console.create().apply()
+	.setHost("localhost")
+	.setPort("8889")
+	.setPath("h2-console");
+```
